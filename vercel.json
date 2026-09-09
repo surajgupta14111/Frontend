@@ -1,0 +1,14 @@
+{
+  "name": "hospital-management-system",
+  "buildCommand": "npm --prefix Frontend run build -- --configuration production --output-path Frontend/dist/Frontend",
+  "outputDirectory": "Frontend/dist/Frontend",
+  "builds": [
+    {
+      "src": "Frontend/package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    { "src": "^/(.*)$", "dest": "/index.html" }
+  ]
+}
